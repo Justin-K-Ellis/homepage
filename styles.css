@@ -1,0 +1,47 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.profile-img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* Tablet */
+@media (max-width: 700px) {
+    .bio-container {
+        width: 100%;
+        margin: 0 1rem 0 1rem;
+        gap: 0.75rem;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 490px) {
+    h1 {
+        text-align: center;
+    }
+    .bio-container {
+        flex-direction: column;
+    }
+}
