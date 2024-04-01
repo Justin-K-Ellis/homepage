@@ -1,5 +1,6 @@
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -10,6 +11,14 @@ body {
 header {
     display: flex;
     justify-content: center;
+    background: linear-gradient(90deg, #40c8ff, #4068ff);
+    color: white;
+}
+
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
 }
 
 .bio-container {
@@ -25,6 +34,7 @@ header {
 .profile-img {
     max-width: 300px;
     max-height: 300px;
+    border-radius: 0.5rem;
 }
 
 main {
@@ -38,15 +48,13 @@ main {
     /* margin: auto; */
     width: 70%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 330px);
     grid-template-rows: auto;
-    padding: 1rem;
-}
-
-.card-image {
-    min-width: 281px;
-    max-width: 281px;
-    max-height: auto;
+    justify-content: center;
+    /* display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; */
+    padding: 1rem; 
 }
 
 .card {
@@ -56,6 +64,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.card-image {
+    min-width: 281px;
+    max-width: 281px;
+    max-height: auto;
 }
 
 .links {
@@ -63,6 +82,42 @@ main {
     flex-direction: row;
     justify-content: flex-end;
     gap: 1rem;
+}
+
+footer {
+    padding: 2rem;
+    background: linear-gradient(90deg, #4068ff, #40c8ff);
+    color: white
+}
+
+.footer-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container nav ul li a {
+    font-size: 125%;
 }
 
 /* Tablet */
@@ -74,6 +129,10 @@ main {
     }
 }
 
+.shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /* Smartphone */
 @media (max-width: 490px) {
     h1 {
@@ -81,5 +140,9 @@ main {
     }
     .bio-container {
         flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 0;
     }
 }
